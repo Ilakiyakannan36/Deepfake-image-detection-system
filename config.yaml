@@ -1,0 +1,20 @@
+data:
+  real_dir: "data/real_images"
+  fake_dir: "data/fake_images"
+  test_size: 0.2
+  batch_size: 32
+
+model:
+  num_classes: 2
+  dropout_rate: 0.5
+  backbone: "efficientnet_b0"
+
+training:
+  num_epochs: 50
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  patience: 5
+
+inference:
+  confidence_threshold: 0.85
+  model_path: "models/best_model.pth"
